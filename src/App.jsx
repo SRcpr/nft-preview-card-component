@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <main className="border">
-        <figure className="card-image">
+        <div className="card-image">
           <div className="image-container border">
             <img
               className="border"
@@ -14,11 +14,9 @@ function App() {
               alt="image equilibrium"
             />
           </div>
-          <figcaption>
+          <div className="figcaption">
             <h1>
-              <a href="#">
-                <h1>Equilibrium #3429</h1>
-              </a>
+              <a href="#">Equilibrium #3429</a>
             </h1>
             <p>Our Equilibrium collection promotes balance and calm.</p>
             <div className="card-details">
@@ -31,12 +29,12 @@ function App() {
                 <p>3 days left</p>
               </div>
             </div>
-          </figcaption>
-        </figure>
+          </div>
+        </div>
         <section className="author">
           <img src={authorImage} alt="" />
           <p>
-            Creation of{" "}
+            Creation of
             <a href="#" className="author-name">
               Jules Wyvern
             </a>
