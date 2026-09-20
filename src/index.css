@@ -1,12 +1,3 @@
-/* Q1 can I directly make hover effect on 
-image or heading or paragraph ?
-
-Q2 . hover effect as like think, is it correct for accessbity?
-
-Q3. What is the benifits of setting font-size in body,
-when I have to reset font-size always according to project?
-*/
-
 :root {
   /* ### Primary */
   --Blue-500: hsl(215, 51%, 70%);
@@ -114,7 +105,6 @@ main {
   gap: 20px;
   font-size: 0.9rem;
   margin-block-start: 32px;
-  /* margin-block-end: 16px; */
 }
 .author > img {
   width: 30px;
