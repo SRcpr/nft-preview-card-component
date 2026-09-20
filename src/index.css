@@ -1,0 +1,137 @@
+/* Q1 can I directly make hover effect on 
+image or heading or paragraph ?
+
+Q2 . hover effect as like think, is it correct for accessbity?
+
+Q3. What is the benifits of setting font-size in body,
+when I have to reset font-size always according to project?
+*/
+
+:root {
+  /* ### Primary */
+  --Blue-500: hsl(215, 51%, 70%);
+  --Cyan-400: hsl(178, 100%, 50%);
+  /* ### Neutral */
+  --Blue-950: hsl(217, 54%, 11%); /* (main BG)*/
+  --Blue-900: hsl(216, 50%, 16%); /*(card BG) */
+  --Blue-800: hsl(215, 32%, 27%); /* line*/
+  --White: hsl(0, 0%, 100%);
+}
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: var(--White);
+  text-decoration: none;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /*300 400 600*/
+  font-style: normal;
+  font-size: 18px;
+  background-color: var(--Blue-950);
+  color: var(--Blue-500);
+}
+main {
+  width: 90%;
+  max-width: 320px;
+  margin: 64px auto;
+  padding: 16px 20px;
+  background-color: var(--Blue-900);
+  box-shadow: 0px 0px 0px 2px var(--Blue-950);
+}
+.border {
+  border-radius: 16px;
+  overflow: hidden;
+}
+.image-container {
+  position: relative;
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+.image-container::before {
+  content: "";
+  color: var(--White);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--Cyan-400);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.image-container::after {
+  content: url(./assets/icon-view.svg);
+  color: var(--White);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  place-items: center;
+}
+
+.image-container:hover::before {
+  opacity: 0.4;
+  cursor: pointer;
+}
+.image-container:hover::after {
+  cursor: pointer;
+  font-size: 0.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  margin-block-start: 12px;
+  font-weight: 300;
+}
+.card-details > div {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.card-details div:first-child {
+  color: var(--Cyan-400);
+}
+.card-details .card-image > img {
+  width: 100%;
+}
+.author {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.9rem;
+  margin-block-start: 32px;
+  /* margin-block-end: 16px; */
+}
+.author > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--White);
+}
+figcaption > h1 {
+  font-size: 0.7rem;
+  margin-block-start: 20px;
+  font-weight: 600;
+}
+figcaption > p {
+  margin-block-start: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.card-details > div p {
+  font-size: 1rem;
+}
