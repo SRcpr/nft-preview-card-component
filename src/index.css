@@ -61,7 +61,7 @@ main {
   opacity: 0;
 }
 .image-container::after {
-  content: url(./assets/icon-view.svg);
+  content: url(/icon-view.svg);
   color: var(--White);
   position: absolute;
   top: 50%;
@@ -96,7 +96,7 @@ main {
 .card-details div:first-child {
   color: var(--Cyan-400);
 }
-.card-details .card-image > img {
+.card-details {
   width: 100%;
 }
 .author {
